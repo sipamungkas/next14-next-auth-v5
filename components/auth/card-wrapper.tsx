@@ -15,15 +15,15 @@ interface CardWrapperProps {
   headerLabel: string;
   backButtonLabel: string;
   backButtonHref: string;
-  showsocial?: boolean;
+  showSocial?: boolean;
 }
 
 export const CardWrapper = ({
-  backButtonHref,
-  backButtonLabel,
   children,
   headerLabel,
-  showsocial,
+  backButtonLabel,
+  backButtonHref,
+  showSocial,
 }: CardWrapperProps) => {
   return (
     <Card className="w-[400px] shadow-md">
@@ -31,7 +31,7 @@ export const CardWrapper = ({
         <Header label={headerLabel} />
       </CardHeader>
       <CardContent>{children}</CardContent>
-      {showsocial && (
+      {showSocial && (
         <CardFooter>
           <Social />
         </CardFooter>
